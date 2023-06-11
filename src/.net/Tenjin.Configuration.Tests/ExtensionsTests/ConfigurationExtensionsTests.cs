@@ -1,6 +1,6 @@
 ﻿using System.IO;
 using System.Text;
-using DeepEqual.Syntax;
+using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using Tenjin.Configuration.Extensions;
@@ -22,6 +22,6 @@ public class ConfigurationExtensionsTests
             .Build();
         var settings = config.BindObject<TopSettings>("TestSection");
 
-        settings.ShouldDeepEqual(TestConstants.TestSettingsObject);
+        settings.Should().BeEquivalentTo(TestConstants.TestSettingsObject);
     }
 }
