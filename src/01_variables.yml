@@ -4,4 +4,4 @@ variables:
   buildConfiguration: 'Release'
   ngBuildConfiguration: '--prod'
   solutionPath: 'src/.net/Tenjin.Configuration.sln'
-  nugetProjectPath: 'src/.net/Tenjin/Tenjin.Configuration.csproj'
+  nugetProjectPath: 'src/.net/Tenjin.Configuration/Tenjin.Configuration.csproj'
