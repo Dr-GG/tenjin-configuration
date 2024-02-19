@@ -3,12 +3,12 @@
 namespace Tenjin.Configuration.Extensions;
 
 /// <summary>
-/// A collection of extensions for the IConfiguration instance.
+/// A collection of extension methods for IConfiguration.
 /// </summary>
 public static class ConfigurationExtensions
 {
     /// <summary>
-    /// Binds an object by key from an IConfiguration instance to a strongly typed object.
+    /// Binds an object of a specified type to the configuration section with the specified key.
     /// </summary>
     public static TObject BindObject<TObject>(this IConfiguration configuration, string key)
         where TObject : class, new()
