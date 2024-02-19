@@ -18,8 +18,8 @@ public class ConfigurationExtensionsTests
         var jsonUtf8 = Encoding.UTF8.GetBytes(TestConstants.GetJson());
         using var jsonStream = new MemoryStream(jsonUtf8);
         var config = new ConfigurationBuilder()
-            .AddJsonStream(jsonStream)
-            .Build();
+           .AddJsonStream(jsonStream)
+           .Build();
         var settings = config.BindObject<TopSettings>("TestSection");
 
         settings.Should().BeEquivalentTo(TestConstants.TestSettingsObject);
